@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
 import { fetchProduct } from "../../redux/actions/product";
@@ -25,7 +25,7 @@ const ProductDetailed = () => {
                         {product.name}
                     </div>
                     <div className="col-2">
-                        <Link to={"/comments/" + id} style={{ textDecoration: 'none' }}>
+                        <Link to={"/product/comments/" + id} style={{ textDecoration: 'none' }}>
                             <button className="btn btn-outline-dark btn-sm">Comments</button>
                         </Link>
                     </div>

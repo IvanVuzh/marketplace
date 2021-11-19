@@ -20,7 +20,7 @@ const UserDetailed = () => {
   }, [])
 
   const RateUser = () => {
-    dispatch(ApplyMyRate(id, rating));
+    dispatch(ApplyMyRate(id, id, rating));
   }
 
   return (

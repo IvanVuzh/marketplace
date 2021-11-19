@@ -14,7 +14,7 @@ namespace MarketPlace5.Models.Entities
         public string Id { get; set; } = Guid.NewGuid().ToString();
 
         [Required]
-        [StringLength(500,MinimumLength = 1, ErrorMessage = "Product name cannot be longer than 300 characters")]
+        [StringLength(500,MinimumLength = 1, ErrorMessage = "Comment text cannot be longer than 500 characters")]
         public string Text{ get; set; }
 
         [Required]

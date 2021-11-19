@@ -31,6 +31,7 @@ namespace MarketPlace5
                 options.UseNpgsql(Configuration.GetConnectionString("DataContextLocal")));
 
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IRatingService, RatingsService>();
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<ISellerSubscriptionService, SellerSubscriptionService>();
             services.AddScoped<ICommentService, CommentService>();

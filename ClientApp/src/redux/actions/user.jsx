@@ -57,9 +57,9 @@ export const fetchUser = (id) => async (dispatch) => {
     }
 };
 
-export const ApplyMyRate = (id, rating) => async (dispatch) => {
+export const ApplyMyRate = (sellerId, userId, rating) => async (dispatch) => {
     try {
-        await UserService.rateUser(id, rating)
+        await UserService.rateUser(sellerId, userId, rating)
     } catch (error) {
         console.log('error rating user', error);
         dispatch(ErrorCreator(error));

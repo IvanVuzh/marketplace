@@ -7,6 +7,8 @@ using System.Collections.Generic;
 
 namespace MarketPlace5.Controllers
 {
+    [Route("ratings")]
+
     public class RatingsController : Controller
     {
         readonly IRatingService service;
@@ -63,4 +65,4 @@ namespace MarketPlace5.Controllers
         }
     }
 }
-}
+

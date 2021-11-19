@@ -24,15 +24,20 @@ class UserService {
         return response.data;
     }
 
-    async rateUser(userId, rating){
+    async rateUser(sellerId, userId, rating){
         alert(`User ${userId} rated with mark ${rating}`);
-        // const url = `users/rate/${userId}/${rating}`
-        // await axios.post(url, data)
+        const url = `ratings/update`
+        const body = {
+            userId: "f557fda4-9c50-4422-b335-73c070048a6d",
+            rating: rating,
+            sellerId: sellerId
+        }
+        await axios.post(url, body)
     }
 
     async remove(id){
         const token = JSON.parse(localStorage.getItem("token"));
-        const currentAdminId = jwtDecode(token).user_id;
+        const currentAdminId = jwtDecode(token).userId;
         if (currentAdminId === id) {
             throw new Error("User you want to delete is you!");
         }

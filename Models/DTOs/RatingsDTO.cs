@@ -7,6 +7,6 @@
         
         public string SellerId { get; set; }
 
-        public int NewRatingMark{ get; set; }
+        public double Rating{ get; set; }
     }
 }

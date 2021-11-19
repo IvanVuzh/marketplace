@@ -22,9 +22,9 @@ namespace MarketPlace5.Controllers
 
         [Route("get-paginated")]
         [HttpGet]
-        public ActionResult<List<Comment>> GetCommentsPaginated(int offset, int limit)
+        public ActionResult<List<Comment>> GetCommentsPaginated(int offset, int limit, string productId)
         {
-            List<Comment> comments = service.GetCommentsPaginated(offset, limit);
+            List<Comment> comments = service.GetCommentsPaginated(offset, limit, productId);
             int count = service.getCount();
             return Ok(new { comments, count });
         }

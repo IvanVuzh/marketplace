@@ -47,7 +47,7 @@ const UserCatalog = () => {
     return (
         <Catalog
             deleteAction={deleteUser}
-            detailUrl="/user/update"
+            detailUrl="/user/detail"
             title={'User catalog'}
             actionComponent={<CreateButton link="/create-user" text="Create a user"/>}
             headers={tableHeaders}

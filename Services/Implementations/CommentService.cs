@@ -48,10 +48,11 @@ namespace MarketPlace5.Services.Implementations
                 .FirstOrDefault(p => p.Id == id);
         }
 
-        public List<Comment> GetCommentsPaginated(int offset, int limit)
+        public List<Comment> GetCommentsPaginated(int offset, int limit, string productId)
         {
             return db.Comments
                 .AsNoTracking()
+                .Where(p => p.ProductId == productId)
                 .Skip(offset * limit)
                 .Take(limit)
                 .Include(p => p.Product)

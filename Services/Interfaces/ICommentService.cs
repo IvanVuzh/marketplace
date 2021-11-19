@@ -9,7 +9,7 @@ namespace MarketPlace5.Services.Interfaces
 {
     public interface ICommentService
     {
-        public List<Comment> GetCommentsPaginated(int offset, int limit);
+        public List<Comment> GetCommentsPaginated(int offset, int limit, string productId);
         public Comment GetCommentById(string id);
         public void DeleteComment(string id);
         public void UpdateComment(string id, CommentDTO newData);

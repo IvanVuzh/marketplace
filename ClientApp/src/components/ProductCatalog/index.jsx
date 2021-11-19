@@ -46,7 +46,7 @@ const ProductCatalog = () => {
     return (
         <Catalog
             deleteAction={deleteProduct}
-            detailUrl="/product/update"
+            detailUrl="/product/detail"
             title={'Product catalog'}
             actionComponent={<CreateButton link="/create-product" text="Create a product"/>}
             headers={tableHeaders}

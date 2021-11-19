@@ -12,7 +12,6 @@ export const Catalog = ({
   limit,
   elementsCount = 0,
 }) => {
-  console.log(data)
   const start = limit * offset;
   const end = limit * (offset + 1) < elementsCount ? limit * (offset + 1) : elementsCount;
   return (
@@ -28,7 +27,7 @@ export const Catalog = ({
         <div className="row">
           {
             data.map(entry => 
-              <Card headers={headers} data={entry} detailUrl={detailUrl} />
+              <Card headers={headers} data={entry} detailUrl={detailUrl} key={"card " + Math.random()}/>
             )
           }
         </div>

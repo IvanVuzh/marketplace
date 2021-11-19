@@ -18,6 +18,9 @@ const NavMenu = () => {
               <li className="nav-item">
                 <a className="nav-link" href="/products">Products</a>
               </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/categories">Categories</a>
+              </li>
             </ul>
           </div>
         </div>
